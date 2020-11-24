@@ -20,7 +20,7 @@ export default class SVG_rope {
     this.nbItems = 15;
     this.ropeLength = this.options ? this.options.ropeLength : 500 || 500;
     this.relaxationIterations = 40;
-    this.gravity = -9.81;
+    this.gravity = 9.81;
     this.pixelsPerMeter = 300;
     this.handleId = this.nbItems - 1; // Math.ceil(Math.random() * 3);
 

@@ -6,7 +6,7 @@ class SVG {
   constructor() {
     // SUPER IMPORTANT !!
     this.SVG_NS = "http://www.w3.org/2000/svg";
-    this.ropeNumber = 250;
+    this.ropeNumber = 75;
     this.ropes = [];
     this.mouse = new Point(2000, 2000);
     this.setup();
@@ -20,13 +20,9 @@ class SVG {
     const gap = window.innerWidth / this.ropeNumber;
     for (let i = 0; i < this.ropeNumber; i++) {
       this.ropes.push(
-        new SVG_rope(
-          this.view,
-          new Point(gap * i + gap / 2, window.innerHeight),
-          {
-            ropeLength: 700 + (400 - Math.random() * 800),
-          }
-        )
+        new SVG_rope(this.view, new Point(gap * i + gap / 2, 0), {
+          ropeLength: 700 + (400 - Math.random() * 800),
+        })
       );
     }
 
